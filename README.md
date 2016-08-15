@@ -1,7 +1,9 @@
 # BroadcastBestPractice
 
-《第一行代码》里面的一个小demo，实现强制下线功能
+《第一行代码》里面的一个小demo，实现强制下线和记住密码功能
 
-主要用于练习广播的使用
+主要用于练习广播和SharedPreferences技术的使用
+
+因为将密码以明文的形式存储在 SharedPreferences文件中是非常不安全的，很容易就会被别人盗取，因此在正式的项目里还需要结合一定的加密算法来对密码进行保护才行。 
 
 注：在onReceive方法中使用WindowManager.LayoutParams.TYPE_SYSTEM_ALERT会导致程序崩溃，无法弹出系统对话框，改用WindowManager.LayoutParams.TYPE_TOAST
